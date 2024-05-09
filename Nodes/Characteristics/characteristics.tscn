@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://w8tlnmpconx1"]
+
+[ext_resource type="Script" path="res://Scripts/Stats/Characteristics.gd" id="1_pvyos"]
+[ext_resource type="Script" path="res://Nodes/Characteristics/Stats.gd" id="2_arvhy"]
+
+[node name="Characteristics" type="Node"]
+script = ExtResource("1_pvyos")
+
+[node name="Stats" type="Node" parent="."]
+script = ExtResource("2_arvhy")

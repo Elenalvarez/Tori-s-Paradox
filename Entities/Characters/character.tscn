@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dddks02b6aqo"]
+
+[ext_resource type="PackedScene" uid="uid://b8gx4yd2gpqc7" path="res://Entities/entity.tscn" id="1_wr8ps"]
+[ext_resource type="Script" path="res://Entities/Characters/character.gd" id="2_w8d6o"]
+
+[node name="Character" instance=ExtResource("1_wr8ps")]
+script = ExtResource("2_w8d6o")
+
+[editable path="Hurtbox"]
