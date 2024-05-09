@@ -21,22 +21,22 @@ position = Vector2(62, -21)
 [node name="Exit" parent="." index="3"]
 position = Vector2(966, 338)
 
-[node name="Tori" parent="." index="4" instance=ExtResource("3_35xpt")]
-position = Vector2(580, 506)
-accerelation = 25
-max_speed = 150
-
-[node name="Camera2D" type="Camera2D" parent="Tori" index="7"]
-zoom = Vector2(3, 3)
-
-[node name="FondoPrueba1" type="Sprite2D" parent="." index="5"]
+[node name="FondoPrueba1" type="Sprite2D" parent="." index="4"]
 z_index = -1
 position = Vector2(67, -205)
 scale = Vector2(0.323828, 0.245833)
 texture = ExtResource("4_gs7u3")
 
-[node name="FondosTierra" type="Sprite2D" parent="." index="6"]
+[node name="FondosTierra" type="Sprite2D" parent="." index="5"]
 z_index = -2
 position = Vector2(634, 574)
 scale = Vector2(2.49941, 0.864258)
 texture = ExtResource("5_5u64t")
+
+[node name="Tori" parent="." index="6" instance=ExtResource("3_35xpt")]
+position = Vector2(525, 505)
+accerelation = 25
+max_speed = 150
+
+[node name="Camera2D" type="Camera2D" parent="Tori" index="7"]
+zoom = Vector2(3, 3)
