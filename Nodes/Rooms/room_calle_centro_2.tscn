@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" uid="uid://cxo5rwdodfuhv" path="res://Nodes/Rooms/room.tscn" id="1_q5f4h"]
+[ext_resource type="PackedScene" uid="uid://dla015j21sl0p" path="res://Nodes/Rooms/Tilemaps/Tilemap_callecentro2.tscn" id="2_nryhv"]
+
+[node name="Room" instance=ExtResource("1_q5f4h")]
+
+[node name="TileMap" parent="." index="4" instance=ExtResource("2_nryhv")]

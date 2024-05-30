@@ -1,6 +1,7 @@
-[gd_scene load_steps=117 format=3 uid="uid://mmkccnfwno6i"]
+[gd_scene load_steps=119 format=3 uid="uid://mmkccnfwno6i"]
 
 [ext_resource type="PackedScene" uid="uid://dddks02b6aqo" path="res://Entities/Characters/character.tscn" id="1_165ns"]
+[ext_resource type="Texture2D" uid="uid://c4tug37lf82fd" path="res://Assets/Sprites/shadow(73x44).png" id="2_3c55x"]
 [ext_resource type="Texture2D" uid="uid://d4mhqiouhqyj6" path="res://Assets/Sprites/AttackNE(73x44).png" id="2_rvhdd"]
 [ext_resource type="Texture2D" uid="uid://h8v0xcbjhlwb" path="res://Assets/Sprites/AttackNW(73x44).png" id="3_r2t0u"]
 [ext_resource type="Script" path="res://Scripts/States/CharacterIdle.gd" id="4_1ldpq"]
@@ -743,6 +744,10 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a6wun"]
+radius = 6.0
+height = 28.0
+
 [sub_resource type="Animation" id="Animation_vdn0h"]
 length = 0.001
 tracks/0/type = "value"
@@ -926,17 +931,27 @@ radius = 7.99962
 height = 52.017
 
 [node name="Tori" instance=ExtResource("1_165ns")]
+accerelation = 50
 
-[node name="AnimatedSprite2D" parent="." index="0"]
+[node name="Shadow(73x44)" type="Sprite2D" parent="." index="0"]
+position = Vector2(0, 3)
+texture = ExtResource("2_3c55x")
+
+[node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_ce1k3")
 animation = &"attack_NW"
+frame = 1
 
-[node name="AnimationPlayer" parent="." index="2"]
+[node name="CollisionShape2D" parent="." index="2"]
+position = Vector2(0, 6)
+shape = SubResource("CapsuleShape2D_a6wun")
+
+[node name="AnimationPlayer" parent="." index="3"]
 libraries = {
 "": SubResource("AnimationLibrary_22yw4")
 }
 
-[node name="State Machine" parent="." index="3" node_paths=PackedStringArray("initial_state")]
+[node name="State Machine" parent="." index="4" node_paths=PackedStringArray("initial_state")]
 initial_state = NodePath("CharacterIdle")
 
 [node name="CharacterIdle" type="Node" parent="State Machine" index="0"]
@@ -948,10 +963,10 @@ script = ExtResource("5_8r7k8")
 [node name="CharacterMove" type="Node" parent="State Machine" index="2"]
 script = ExtResource("7_x64bk")
 
-[node name="Characteristics" parent="." index="4"]
+[node name="Characteristics" parent="." index="5"]
 starting_stats = ExtResource("7_420tl")
 
-[node name="Hurtbox" parent="." index="5"]
+[node name="Hurtbox" parent="." index="6"]
 collision_layer = 2
 collision_mask = 260
 
@@ -959,12 +974,15 @@ collision_mask = 260
 position = Vector2(0, 4)
 shape = SubResource("CapsuleShape2D_h7bva")
 
-[node name="Hitbox" parent="." index="6" instance=ExtResource("4_g30sy")]
+[node name="Hitbox" parent="." index="7" instance=ExtResource("4_g30sy")]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Hitbox" index="1"]
 position = Vector2(-13, -5)
 rotation = -1.58054
 shape = SubResource("CapsuleShape2D_8iieq")
 disabled = true
+
+[node name="Camera2D" type="Camera2D" parent="." index="8"]
+zoom = Vector2(3, 3)
 
 [editable path="Hurtbox"]

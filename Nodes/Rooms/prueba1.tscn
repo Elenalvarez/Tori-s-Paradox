@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://cpdr06c2obhgr"]
+[gd_scene load_steps=6 format=3 uid="uid://bj81mg85kenpq"]
 
 [ext_resource type="PackedScene" uid="uid://cxo5rwdodfuhv" path="res://Nodes/Rooms/room.tscn" id="1_2bp6b"]
-[ext_resource type="PackedScene" uid="uid://csbewha4vanu4" path="res://prueba_tilemap.tscn" id="2_hopse"]
-[ext_resource type="PackedScene" uid="uid://mmkccnfwno6i" path="res://Entities/Characters/tori.tscn" id="3_35xpt"]
+[ext_resource type="PackedScene" uid="uid://csbewha4vanu4" path="res://Nodes/Rooms/Tilemaps/prueba_tilemap.tscn" id="2_hopse"]
 [ext_resource type="Texture2D" uid="uid://u8wqe0r6f1ad" path="res://Assets/Tiles/fondo_prueba1.jpg" id="4_gs7u3"]
 [ext_resource type="Texture2D" uid="uid://bkdmmc0kogd1m" path="res://Assets/Tiles/FONDOS tierra.jpg" id="5_5u64t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mrso3"]
+size = Vector2(248.428, 20)
 
 [node name="Room" instance=ExtResource("1_2bp6b")]
 
@@ -18,25 +20,21 @@ position = Vector2(559, 530)
 [node name="EnemyPosition" parent="." index="2"]
 position = Vector2(62, -21)
 
-[node name="Exit" parent="." index="3"]
-position = Vector2(966, 338)
-
-[node name="FondoPrueba1" type="Sprite2D" parent="." index="4"]
+[node name="FondoPrueba1" type="Sprite2D" parent="." index="3"]
 z_index = -1
 position = Vector2(67, -205)
 scale = Vector2(0.323828, 0.245833)
 texture = ExtResource("4_gs7u3")
 
-[node name="FondosTierra" type="Sprite2D" parent="." index="5"]
+[node name="FondosTierra" type="Sprite2D" parent="." index="4"]
 z_index = -2
 position = Vector2(634, 574)
 scale = Vector2(2.49941, 0.864258)
 texture = ExtResource("5_5u64t")
 
-[node name="Tori" parent="." index="6" instance=ExtResource("3_35xpt")]
-position = Vector2(525, 505)
-accerelation = 25
-max_speed = 150
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(984, 325)
+rotation = 0.464029
+shape = SubResource("RectangleShape2D_mrso3")
 
-[node name="Camera2D" type="Camera2D" parent="Tori" index="7"]
-zoom = Vector2(3, 3)
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

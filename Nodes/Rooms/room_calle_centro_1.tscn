@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" uid="uid://cxo5rwdodfuhv" path="res://Nodes/Rooms/room.tscn" id="1_3s04r"]
+[ext_resource type="PackedScene" uid="uid://cch3n7db4kijv" path="res://Nodes/Rooms/Tilemaps/Tilemap_callecentro1.tscn" id="2_4ltqq"]
+
+[node name="RoomCalleCentro1" instance=ExtResource("1_3s04r")]
+exit_direction = "N"
+entrance_direction = "S"
+
+[node name="Entrance" parent="." index="0"]
+position = Vector2(245, 692)
+
+[node name="Area2D" parent="." index="2"]
+disable_mode = 1
+collision_mask = 7
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(1881, -156)
+rotation = 0.44099
+
+[node name="Tilemap" parent="." index="3" instance=ExtResource("2_4ltqq")]
+layer_10/tile_data = PackedInt32Array(4718636, 262145, 8, 9240586, 262145, 8, 7471128, 262145, 8, 8060938, 262145, 5, 6291480, 262145, 5, 3211319, 262145, 8, 1900609, 262145, 8, 3538988, 262145, 5, 2031671, 262145, 5, 720961, 262145, 5, 12124183, 262145, 8, 10092582, 262145, 8, 7209020, 262145, 8, 5242955, 262145, 8, 8912934, 262145, 5, 6029372, 262145, 5, 4063307, 262145, 5, 3407961, 262145, 8, 1769573, 262145, 8, 458863, 262145, 8, -1965984, 262145, 8, 393292, 262145, 8, 2228313, 262145, 5, 589925, 262145, 5, -3145632, 262145, 5, -720785, 262145, 5, -786356, 262145, 5)
+layer_12/tile_data = PackedInt32Array(8912934, 262145, 5, 10944535, 262145, 5, 10420253, 393217, 6, 11927569, 393217, 6, 8192045, 393217, 6, 6881335, 393217, 6, 4784199, 393217, 6, 1179746, 393217, 6, -1703850, 393217, 6, 1769532, 393217, 6, 4325416, 393217, 6, 5177377, 393217, 6, 7536656, 393217, 6, 9568258, 393217, 6)

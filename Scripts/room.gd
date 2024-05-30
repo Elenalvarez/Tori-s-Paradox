@@ -8,6 +8,7 @@ const ENEMY_SCENES: Dictionary = {
 
 #--VARIABLES--
 var num_enemies: int
+var tori = preload("res://Entities/Characters/tori.tscn")
 
 #--VARIABLES EXPORTADAS--
 @export var exit_direction: String
@@ -22,4 +23,14 @@ var num_enemies: int
 #--FUNCIONES--
 
 func _ready():
+	var player = tori.instantiate()
+	get_node("Player").add_child(player)
+	player.global_position = entrance.global_position
+	
 	num_enemies = enemy_position.get_child_count()
+	
+
+
+func _on_area_2d_body_entered(body):
+	if body is Character:
+		get_tree().change_scene_to_file("res://Nodes/Rooms/room_calle_centro_1.tscn")

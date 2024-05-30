@@ -1,12 +1,17 @@
 [gd_scene load_steps=2 format=3 uid="uid://cxo5rwdodfuhv"]
 
-[ext_resource type="Script" path="res://Scripts/room.gd" id="1_aym0y"]
+[ext_resource type="Script" path="res://Scripts/room.gd" id="1_22jln"]
 
 [node name="Room" type="Node2D"]
-script = ExtResource("1_aym0y")
+script = ExtResource("1_22jln")
 
-[node name="Entrance" type="Node2D" parent="."]
+[node name="Entrance" type="Marker2D" parent="."]
 
 [node name="EnemyPosition" type="Node2D" parent="."]
 
-[node name="Exit" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+
+[node name="Player" type="Node2D" parent="."]
