@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=17 format=3 uid="uid://bicvskqyrbaw1"]
+[gd_resource type="TileSet" load_steps=19 format=3 uid="uid://bicvskqyrbaw1"]
 
 [ext_resource type="Texture2D" uid="uid://dbahqulqxg2e8" path="res://Assets/Tiles/ASFALTO SIMETRICO.png" id="1_17khg"]
 [ext_resource type="Texture2D" uid="uid://cia3xowpj7se3" path="res://Assets/Tiles/TILESET DE CALLES.png" id="1_of1ng"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://71ket3gkdh6u" path="res://Assets/Tiles/TILESET DE CALLES ASFATOS.png" id="5_h4hgx"]
 [ext_resource type="Texture2D" uid="uid://6dewv7phwdmj" path="res://Assets/Tiles/RESOL DEFINITIVA TILE.png" id="6_xhklv"]
 [ext_resource type="Texture2D" uid="uid://v04o1e3dbc52" path="res://Assets/Tiles/ALZADOS SIMÉTRICOS.png" id="7_nikhl"]
+[ext_resource type="Texture2D" uid="uid://8dik2aywnq2k" path="res://Assets/Tiles/BARRERA PARADOJA ANIMACION COMPLETA.png" id="8_qyx1d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d11gx"]
 texture = ExtResource("1_17khg")
@@ -75,6 +76,22 @@ texture_region_size = Vector2i(38, 38)
 7:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 7:8/0/physics_layer_0/angular_velocity = 0.0
 7:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1, -6.5, 2, -6.5, 2, -1, -1, -1)
+4:1/0 = 0
+4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:1/0/physics_layer_0/angular_velocity = 0.0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -4, -9, 0, -9, -1.5, 0, -5.5)
+5:1/0 = 0
+5:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:1/0/physics_layer_0/angular_velocity = 0.0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -4, 9, 0, 9, -1.5, 0, -5.5)
+4:2/0 = 0
+4:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:2/0/physics_layer_0/angular_velocity = 0.0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 3, -9, -1, -9, 0, 0, 4)
+5:2/0 = 0
+5:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:2/0/physics_layer_0/angular_velocity = 0.0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 4, 9, 0, 9, -1, 0, 3)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ykgxq"]
 texture = ExtResource("2_v6mv0")
@@ -248,6 +265,18 @@ texture_region_size = Vector2i(18, 18)
 0:12/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:12/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gmjwi"]
+texture = ExtResource("8_qyx1d")
+texture_region_size = Vector2i(228, 304)
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-112.5, 17, 112, 131.5, 112, 124, -112, 9)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y5cms"]
 texture = ExtResource("7_nikhl")
 texture_region_size = Vector2i(38, 38)
@@ -346,3 +375,4 @@ sources/6 = SubResource("TileSetAtlasSource_y5cms")
 sources/13 = SubResource("TileSetAtlasSource_ykgxq")
 sources/14 = SubResource("TileSetAtlasSource_lkxbx")
 sources/0 = SubResource("TileSetAtlasSource_d11gx")
+sources/5 = SubResource("TileSetAtlasSource_gmjwi")
