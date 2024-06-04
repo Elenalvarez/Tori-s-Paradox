@@ -28,9 +28,8 @@ func _ready():
 	player.global_position = entrance.global_position
 	
 	num_enemies = enemy_position.get_child_count()
-	
 
 
 func _on_area_2d_body_entered(body):
 	if body is Character:
-		get_tree().change_scene_to_file("res://Nodes/Rooms/room_calle_centro_1.tscn")
+		get_tree().change_scene_to_file("res://Nodes/control_prueba.tscn")

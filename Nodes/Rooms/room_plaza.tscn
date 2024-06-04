@@ -1,8 +1,18 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://dhxuautwqgeyy"]
 
 [ext_resource type="PackedScene" uid="uid://cxo5rwdodfuhv" path="res://Nodes/Rooms/room.tscn" id="1_u2yqa"]
 [ext_resource type="PackedScene" uid="uid://bbp4ywyksmild" path="res://Nodes/Rooms/Tilemaps/Tilemap_plaza.tscn" id="2_f58c6"]
 
 [node name="Room" instance=ExtResource("1_u2yqa")]
 
+[node name="Entrance" parent="." index="0"]
+position = Vector2(212, 518)
+
 [node name="TileMap" parent="." index="4" instance=ExtResource("2_f58c6")]
+layer_12/name = "Superior"
+layer_12/enabled = true
+layer_12/modulate = Color(1, 1, 1, 1)
+layer_12/y_sort_enabled = false
+layer_12/y_sort_origin = 0
+layer_12/z_index = 1
+layer_12/tile_data = PackedInt32Array(7536675, 4, 12, 7340056, 4, 12, 6357004, 4, 12, 4128782, 4, 12, 2949144, 4, 12, 3080225, 4, 12, 3014690, 4, 12, 4259883, 4, 12, 4325420, 4, 12, 6225965, 4, 12, 7012360, 262145, 5, 7667725, 262145, 5, 5767187, 262145, 5, 3080214, 262145, 5, 3342372, 262145, 5, 5767207, 262145, 5, 7667758, 262145, 5, 7012403, 262145, 5, 6553611, 393217, 6, 5963782, 393217, 6, 5505027, 393217, 6, 4653060, 393217, 6, 4128775, 393217, 6, 3866634, 393217, 6, 3473421, 393217, 6, 2883603, 393217, 6, 2424854, 393217, 6, 1769497, 393217, 6, 1966112, 393217, 6, 2621475, 393217, 6, 3145767, 393217, 6, 3604524, 393217, 6, 4128815, 393217, 6, 4653107, 393217, 6, 5767223, 393217, 6, 6291507, 393217, 6, 6815791, 393217, 6, 4849694, 327681, 5)

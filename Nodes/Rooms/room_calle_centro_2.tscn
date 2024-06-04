@@ -1,8 +1,22 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=4 format=3 uid="uid://bd6d2b1sa4yss"]
 
 [ext_resource type="PackedScene" uid="uid://cxo5rwdodfuhv" path="res://Nodes/Rooms/room.tscn" id="1_q5f4h"]
 [ext_resource type="PackedScene" uid="uid://dla015j21sl0p" path="res://Nodes/Rooms/Tilemaps/Tilemap_callecentro2.tscn" id="2_nryhv"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qfkst"]
+size = Vector2(88, 42.1992)
+
 [node name="Room" instance=ExtResource("1_q5f4h")]
 
+[node name="Entrance" parent="." index="0"]
+position = Vector2(86, 573)
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(846.418, 458.313)
+rotation = -0.702541
+shape = SubResource("RectangleShape2D_qfkst")
+
 [node name="TileMap" parent="." index="4" instance=ExtResource("2_nryhv")]
+layer_10/tile_data = PackedInt32Array(6881323, 262145, 8, 8847360, 262145, 8, 9830406, 262145, 8, 7340045, 262145, 8, 5505051, 262145, 8, 6291488, 262145, 8, 7864340, 262145, 8)
+layer_12/z_index = 1
+layer_12/tile_data = PackedInt32Array(8650758, 262145, 5, 7667712, 262145, 5, 6160397, 262145, 5, 6684692, 262145, 5, 5701675, 262145, 5, 5111840, 262145, 5, 4325403, 262145, 5)

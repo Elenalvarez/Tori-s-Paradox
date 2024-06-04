@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3s3ii4kag1rr"]
+[gd_scene load_steps=4 format=3 uid="uid://d3s3ii4kag1rr"]
 
 [ext_resource type="PackedScene" uid="uid://cxo5rwdodfuhv" path="res://Nodes/Rooms/room.tscn" id="1_3s04r"]
 [ext_resource type="PackedScene" uid="uid://cch3n7db4kijv" path="res://Nodes/Rooms/Tilemaps/Tilemap_callecentro1.tscn" id="2_4ltqq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cn8vi"]
+size = Vector2(460.025, 36.9425)
 
 [node name="RoomCalleCentro1" instance=ExtResource("1_3s04r")]
 exit_direction = "N"
@@ -15,7 +18,9 @@ disable_mode = 1
 collision_mask = 7
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
-position = Vector2(1881, -156)
+z_index = 1
+position = Vector2(2173.88, 136.118)
 rotation = 0.44099
+shape = SubResource("RectangleShape2D_cn8vi")
 
 [node name="TileMap" parent="." index="3" instance=ExtResource("2_4ltqq")]
