@@ -931,7 +931,6 @@ radius = 7.99962
 height = 52.017
 
 [node name="Tori" instance=ExtResource("1_165ns")]
-z_index = 1
 accerelation = 75
 
 [node name="Shadow(73x44)" type="Sprite2D" parent="." index="0"]
