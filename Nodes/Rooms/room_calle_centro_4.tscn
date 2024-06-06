@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cph81feec7246"]
+
+[ext_resource type="PackedScene" uid="uid://cxo5rwdodfuhv" path="res://Nodes/Rooms/room.tscn" id="1_q0tm7"]
+[ext_resource type="PackedScene" uid="uid://djakqh5st1642" path="res://Nodes/Rooms/Tilemaps/Tilemap_callecentro4.tscn" id="2_cxd46"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rwooe"]
+size = Vector2(542.497, 28.3044)
+
+[node name="Room" instance=ExtResource("1_q0tm7")]
+exit_direction = "N"
+entrance_direction = "W"
+
+[node name="TileMap" parent="." index="0" instance=ExtResource("2_cxd46")]
+collision_visibility_mode = 1
+
+[node name="Entrance" parent="." index="1"]
+position = Vector2(779, 455)
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(2186.29, 147.052)
+rotation = 0.484215
+shape = SubResource("RectangleShape2D_rwooe")

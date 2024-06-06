@@ -4,8 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://d218wphjfi5ec" path="res://Nodes/Rooms/Tilemaps/Tilemap_callecentro3.tscn" id="2_qrjnh"]
 
 [node name="Room" instance=ExtResource("1_06ixc")]
+exit_direction = "N"
+entrance_direction = "E"
 
 [node name="TileMap" parent="." index="0" instance=ExtResource("2_qrjnh")]
+collision_visibility_mode = 1
 
 [node name="Entrance" parent="." index="1"]
 position = Vector2(1137, 692)

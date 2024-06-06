@@ -11,6 +11,7 @@ exit_direction = "N"
 entrance_direction = "S"
 
 [node name="TileMap" parent="." index="0" instance=ExtResource("2_4ltqq")]
+collision_visibility_mode = 1
 layer_12/y_sort_enabled = false
 
 [node name="Entrance" parent="." index="1"]
@@ -22,6 +23,6 @@ collision_mask = 7
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
 z_index = 1
-position = Vector2(2173.88, 136.118)
+position = Vector2(2181, 141)
 rotation = 0.44099
 shape = SubResource("RectangleShape2D_cn8vi")

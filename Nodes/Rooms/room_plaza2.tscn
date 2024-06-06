@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmv58fdeewhrt"]
+
+[ext_resource type="PackedScene" uid="uid://cxo5rwdodfuhv" path="res://Nodes/Rooms/room.tscn" id="1_86bed"]
+[ext_resource type="PackedScene" uid="uid://cgcw5l8rgkafp" path="res://Nodes/Rooms/Tilemaps/Tilemap_plaza2.tscn" id="2_48qva"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y8bc4"]
+size = Vector2(68.0178, 20)
+
+[node name="Room" instance=ExtResource("1_86bed")]
+
+[node name="TileMap" parent="." index="0" instance=ExtResource("2_48qva")]
+
+[node name="Entrance" parent="." index="1"]
+position = Vector2(-45, 346)
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(433, 119)
+rotation = -0.506171
+shape = SubResource("RectangleShape2D_y8bc4")
