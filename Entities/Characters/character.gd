@@ -1,27 +1,25 @@
 extends Entity
 class_name Character
 
-
-func _process(delta):
-	pass
-
+# Función para obtener la dirección en la que se encuentra el ratón con respecto al personaje
 func get_mouse_dir():
 	var mouse_direction = (get_global_mouse_position() - global_position).normalized()
 	var dir = "N"
+	var margin = 0.25
 	
-	if mouse_direction.x > 0.25:
-		if mouse_direction.y > 0.25:
+	if mouse_direction.x > margin:
+		if mouse_direction.y > margin:
 			dir = "SE"
-		elif mouse_direction.y < -0.25:
+		elif mouse_direction.y < -margin:
 			dir = "NE"
-		elif mouse_direction.y <0.25 and mouse_direction.y > -0.25:
+		elif mouse_direction.y <margin and mouse_direction.y > -margin:
 			dir = "E"
-	elif mouse_direction.x < -0.25:
-		if mouse_direction.y > 0.25:
+	elif mouse_direction.x < -margin:
+		if mouse_direction.y > margin:
 			dir = "SW"
-		elif mouse_direction.y < -0.25:
+		elif mouse_direction.y < -margin:
 			dir = "NW"
-		elif mouse_direction.y <0.25 and mouse_direction.y > -0.25:
+		elif mouse_direction.y <margin and mouse_direction.y > -margin:
 			dir = "W"
 	else:
 		if mouse_direction.y > 0:
@@ -29,6 +27,7 @@ func get_mouse_dir():
 	
 	return dir
 
+# Función para que el personaje se mueva 
 func move():
 	direction = Vector2.ZERO
 	if Input.is_action_pressed("ui_down"):

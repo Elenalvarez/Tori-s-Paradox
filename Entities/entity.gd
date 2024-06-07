@@ -18,17 +18,17 @@ var direction:Vector2 = Vector2.ZERO
 
 #--FUNCIONES--
 
-#función que llama al movimiento
+# Función que llama al movimiento
 func _physics_process(delta):
 	move_and_slide()
 	velocity = lerp(velocity, Vector2.ZERO, FRICTION)
 
-#función general para moverse
+# Función general para moverse
 func move():
 	direction = direction.normalized()
 	velocity += direction * accerelation
 	velocity = velocity.limit_length(max_speed)
 
-
+# Función que inflinge daño a la hitbox que colisiona con la hurtbox 
 func _on_hurtbox_area_entered(hitbox):
 	var base_damage = hitbox.damage

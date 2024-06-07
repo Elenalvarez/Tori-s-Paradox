@@ -3,9 +3,13 @@ extends Node
 #--VARIABLES EXPORTADAS--
 @export var initial_state: State
 
+# --VARIABLES--
 var current_state: State
 var states: Dictionary = {}
 
+# --FUNCIONES--
+
+# Función de inicialización
 func _ready():
 	for child in get_children():
 		if child is State:
@@ -16,15 +20,17 @@ func _ready():
 		initial_state.enter()
 		current_state = initial_state
 
-
+# Función de procesamiento
 func _process(delta):
 	if current_state:
 		current_state.update(delta)
 
+# Función de actualización de estado
 func _physics_process(delta):
 	if current_state:
 		current_state.physicis_Update(delta)
 
+# Función de cambio de estado
 func on_child_transition(state, new_state_name):
 	if state != current_state:
 		return

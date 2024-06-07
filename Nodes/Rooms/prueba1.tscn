@@ -9,6 +9,7 @@
 size = Vector2(248.428, 20)
 
 [node name="Room" instance=ExtResource("1_2bp6b")]
+exit_direction = "N"
 
 [node name="TileMap" parent="." index="0" instance=ExtResource("2_hopse")]
 position = Vector2(22, 489)

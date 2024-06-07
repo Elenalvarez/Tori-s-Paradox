@@ -7,6 +7,8 @@
 size = Vector2(68.0178, 20)
 
 [node name="Room" instance=ExtResource("1_86bed")]
+exit_direction = "W"
+entrance_direction = "W"
 
 [node name="TileMap" parent="." index="0" instance=ExtResource("2_48qva")]
 

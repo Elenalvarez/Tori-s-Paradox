@@ -7,6 +7,4 @@ class_name Characteristics
 #--VARIABLES LEÍDAS DE NODOS--
 @onready var stats = $Stats
 
-func _ready():
-	pass
 

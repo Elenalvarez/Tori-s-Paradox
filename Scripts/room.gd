@@ -22,6 +22,7 @@ var tori = preload("res://Entities/Characters/tori.tscn")
 
 #--FUNCIONES--
 
+# Función de inicialización
 func _ready():
 	var player = tori.instantiate()
 	get_node("Player").add_child(player)
@@ -29,7 +30,8 @@ func _ready():
 	
 	num_enemies = enemy_position.get_child_count()
 
-
+# Función de cambio de habitación
 func _on_area_2d_body_entered(body):
 	if body is Character:
-		get_tree().change_scene_to_file("res://Nodes/control_prueba.tscn")
+		get_tree().change_scene_to_packed(Global.level_rooms[Global.actual_room])
+		Global.actual_room += 1
