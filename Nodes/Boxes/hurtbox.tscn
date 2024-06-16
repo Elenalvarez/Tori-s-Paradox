@@ -2,6 +2,5 @@
 
 [node name="Hurtbox" type="Area2D"]
 modulate = Color(0.25098, 0.545098, 0.211765, 1)
-monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

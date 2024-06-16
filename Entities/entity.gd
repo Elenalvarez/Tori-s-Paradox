@@ -7,14 +7,10 @@ const FRICTION:float =0.15
 #--VARIABLES--
 var direction:Vector2 = Vector2.ZERO
 
-#--VARIABLES EXPORTADAS--
-@export var accerelation:int = 40
-@export var max_speed:int = 100
-
 #--VARIABLES LEÍDAS DE NODOS--
 @onready var state_machine = get_node("State Machine")
-@onready var animated_sprite = get_node("AnimatedSprite2D")
 @onready var animation = get_node("AnimationPlayer")
+@onready var stats: Stats = get_node("Stats")
 
 #--FUNCIONES--
 
@@ -26,9 +22,16 @@ func _physics_process(delta):
 # Función general para moverse
 func move():
 	direction = direction.normalized()
-	velocity += direction * accerelation
-	velocity = velocity.limit_length(max_speed)
+	velocity += direction * stats.speed
+	velocity = velocity.limit_length(stats.speed * 1.5)
 
-# Función que inflinge daño a la hitbox que colisiona con la hurtbox 
-func _on_hurtbox_area_entered(hitbox):
-	var base_damage = hitbox.damage
+func _on_hurtbox_area_entered(area):
+	if area.name == "Hitbox":
+		var body = area.get_parent()
+		body.stats.take_damage(stats.damage)
+
+func die():
+	get_parent().num_enemies -= 1
+	animation.play("die")
+	await animation.animation_finished
+	queue_free()

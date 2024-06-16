@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://dq575pw2e250d"]
+
+[ext_resource type="PackedScene" uid="uid://b8gx4yd2gpqc7" path="res://Entities/entity.tscn" id="1_1y7hr"]
+[ext_resource type="Script" path="res://Entities/Enemies/enemy.gd" id="2_0iti0"]
+
+[node name="Enemy" instance=ExtResource("1_1y7hr")]
+script = ExtResource("2_0iti0")
+
+[node name="CollisionShape2D" parent="." index="1"]
+light_mask = 4
+visibility_layer = 3
+
+[node name="Hitbox" parent="." index="5"]
+light_mask = 4
+visibility_layer = 2
+collision_layer = 4
+collision_mask = 8
+
+[node name="Hurtbox" parent="." index="6"]
+light_mask = 4
+visibility_layer = 2
+collision_layer = 4
+collision_mask = 2
+
+[editable path="Hurtbox"]

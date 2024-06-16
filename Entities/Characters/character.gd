@@ -40,8 +40,8 @@ func move():
 		direction += Vector2.UP
 	
 	direction = direction.normalized()
-	velocity += direction * accerelation
-	velocity = velocity.limit_length(max_speed)
+	velocity += direction * stats.speed
+	velocity = velocity.limit_length(stats.speed * 1.5)
 
 
 

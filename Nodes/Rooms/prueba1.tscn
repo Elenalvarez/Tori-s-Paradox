@@ -25,8 +25,11 @@ layer_2/tile_data = PackedInt32Array(-1114094, 327680, 0, -1179630, 327680, 0, -
 [node name="Entrance" parent="." index="1"]
 position = Vector2(559, 530)
 
+[node name="Marker2D" type="Marker2D" parent="Entrance" index="0"]
+position = Vector2(149, -43)
+
 [node name="EnemyPosition" parent="." index="2"]
-position = Vector2(62, -21)
+position = Vector2(1, -1)
 
 [node name="FondoPrueba1" type="Sprite2D" parent="." index="3"]
 z_index = -1

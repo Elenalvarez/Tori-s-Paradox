@@ -16,9 +16,16 @@ layer_4/tile_data = PackedInt32Array(9043969, 65537, 1, 8912898, 65537, 1, 87818
 layer_10/tile_data = PackedInt32Array(6881323, 262145, 8, 8847360, 262145, 8, 9830406, 262145, 8, 7340045, 262145, 8, 5505051, 262145, 8, 6291488, 262145, 8, 7864340, 262145, 8)
 layer_12/z_index = 1
 layer_12/tile_data = PackedInt32Array(8650758, 262145, 5, 7667712, 262145, 5, 6160397, 262145, 5, 6684692, 262145, 5, 5701675, 262145, 5, 5111840, 262145, 5, 4325403, 262145, 5)
+layer_13/z_index = 1
 
 [node name="Entrance" parent="." index="1"]
 position = Vector2(86, 573)
+
+[node name="Marker2D" type="Marker2D" parent="EnemyPosition" index="0"]
+position = Vector2(435, 404)
+
+[node name="Marker2D2" type="Marker2D" parent="EnemyPosition" index="1"]
+position = Vector2(617, 322)
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
 position = Vector2(850.402, 450.748)

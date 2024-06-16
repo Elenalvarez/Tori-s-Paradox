@@ -11,10 +11,18 @@ exit_direction = "N"
 entrance_direction = "W"
 
 [node name="TileMap" parent="." index="0" instance=ExtResource("2_cxd46")]
-collision_visibility_mode = 1
 
 [node name="Entrance" parent="." index="1"]
 position = Vector2(779, 455)
+
+[node name="Marker2D" type="Marker2D" parent="EnemyPosition" index="0"]
+position = Vector2(1121, 616)
+
+[node name="Marker2D2" type="Marker2D" parent="EnemyPosition" index="1"]
+position = Vector2(1551, 416)
+
+[node name="Marker2D3" type="Marker2D" parent="EnemyPosition" index="2"]
+position = Vector2(1926, 251)
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
 position = Vector2(2186.29, 147.052)

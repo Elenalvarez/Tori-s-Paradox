@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b8gx4yd2gpqc7"]
+[gd_scene load_steps=6 format=3 uid="uid://b8gx4yd2gpqc7"]
 
 [ext_resource type="Script" path="res://Entities/entity.gd" id="1_mh34o"]
 [ext_resource type="Script" path="res://Scripts/States/State Machine.gd" id="2_k728w"]
-[ext_resource type="PackedScene" uid="uid://w8tlnmpconx1" path="res://Nodes/Characteristics/characteristics.tscn" id="3_tlv1b"]
+[ext_resource type="Script" path="res://Nodes/Characteristics/Stats.gd" id="3_q3lhf"]
 [ext_resource type="PackedScene" uid="uid://y6u4k838iuu" path="res://Nodes/Boxes/hurtbox.tscn" id="4_c3o6p"]
+[ext_resource type="PackedScene" uid="uid://u7siq0afshsi" path="res://Nodes/Boxes/hitbox.tscn" id="5_sh2uh"]
 
 [node name="Entity" type="CharacterBody2D"]
 script = ExtResource("1_mh34o")
@@ -17,10 +18,16 @@ script = ExtResource("1_mh34o")
 [node name="State Machine" type="Node" parent="."]
 script = ExtResource("2_k728w")
 
-[node name="Characteristics" parent="." instance=ExtResource("3_tlv1b")]
+[node name="Stats" type="Node" parent="."]
+script = ExtResource("3_q3lhf")
+
+[node name="Hitbox" parent="." instance=ExtResource("5_sh2uh")]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Hitbox"]
 
 [node name="Hurtbox" parent="." instance=ExtResource("4_c3o6p")]
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
+[connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]
 
 [editable path="Hurtbox"]

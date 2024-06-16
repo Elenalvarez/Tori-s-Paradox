@@ -6,6 +6,6 @@ class_name StartingStats
 @export var name : String = "Nombre"
 
 @export var max_hp : int
-@export var strength : int
+@export var damage : int
 @export var defense : int
 @export var speed : int

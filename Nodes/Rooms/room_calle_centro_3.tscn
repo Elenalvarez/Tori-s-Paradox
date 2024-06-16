@@ -1,14 +1,33 @@
-[gd_scene load_steps=3 format=3 uid="uid://ck5ew42sifti7"]
+[gd_scene load_steps=4 format=3 uid="uid://ck5ew42sifti7"]
 
 [ext_resource type="PackedScene" uid="uid://cxo5rwdodfuhv" path="res://Nodes/Rooms/room.tscn" id="1_06ixc"]
 [ext_resource type="PackedScene" uid="uid://d218wphjfi5ec" path="res://Nodes/Rooms/Tilemaps/Tilemap_callecentro3.tscn" id="2_qrjnh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lvsnv"]
+size = Vector2(16.858, 26.4202)
 
 [node name="Room" instance=ExtResource("1_06ixc")]
 exit_direction = "N"
 entrance_direction = "E"
 
 [node name="TileMap" parent="." index="0" instance=ExtResource("2_qrjnh")]
+position = Vector2(0, 0)
 collision_visibility_mode = 1
 
 [node name="Entrance" parent="." index="1"]
-position = Vector2(1137, 692)
+position = Vector2(929, 524)
+
+[node name="Marker2D" type="Marker2D" parent="EnemyPosition" index="0"]
+position = Vector2(1024, 348)
+
+[node name="Marker2D2" type="Marker2D" parent="EnemyPosition" index="1"]
+position = Vector2(1263, 239)
+
+[node name="Marker2D3" type="Marker2D" parent="EnemyPosition" index="2"]
+position = Vector2(1601, 89)
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(1879.29, -28.5182)
+rotation = 0.472616
+scale = Vector2(28.7949, 1.36075)
+shape = SubResource("RectangleShape2D_lvsnv")

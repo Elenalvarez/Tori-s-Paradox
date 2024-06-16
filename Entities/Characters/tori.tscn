@@ -1,4 +1,4 @@
-[gd_scene load_steps=119 format=3 uid="uid://mmkccnfwno6i"]
+[gd_scene load_steps=118 format=3 uid="uid://dhtg4q8bfngu4"]
 
 [ext_resource type="PackedScene" uid="uid://dddks02b6aqo" path="res://Entities/Characters/character.tscn" id="1_165ns"]
 [ext_resource type="Texture2D" uid="uid://c4tug37lf82fd" path="res://Assets/Sprites/shadow(73x44).png" id="2_3c55x"]
@@ -6,18 +6,17 @@
 [ext_resource type="Texture2D" uid="uid://h8v0xcbjhlwb" path="res://Assets/Sprites/AttackNW(73x44).png" id="3_r2t0u"]
 [ext_resource type="Script" path="res://Scripts/States/CharacterIdle.gd" id="4_1ldpq"]
 [ext_resource type="Texture2D" uid="uid://dvo0osw2ctwmk" path="res://Assets/Sprites/Idle(73x44).png" id="4_dhcjr"]
-[ext_resource type="PackedScene" uid="uid://u7siq0afshsi" path="res://Nodes/Boxes/hitbox.tscn" id="4_g30sy"]
 [ext_resource type="Script" path="res://Scripts/States/CharacterAttack.gd" id="5_8r7k8"]
 [ext_resource type="Texture2D" uid="uid://bguhstx782cbf" path="res://Assets/Sprites/MoveE(73x44).png" id="5_d3ys3"]
 [ext_resource type="Texture2D" uid="uid://b10j40rqjbbp7" path="res://Assets/Sprites/MoveNE(73x44).png" id="5_rwx7m"]
 [ext_resource type="Texture2D" uid="uid://b8r7eh4jljsch" path="res://Assets/Sprites/MoveNW(73x44).png" id="6_0rfii"]
 [ext_resource type="Texture2D" uid="uid://cf3g2h5kgjc3a" path="res://Assets/Sprites/MoveN(73x44).png" id="6_pkaa8"]
-[ext_resource type="Resource" uid="uid://bxfb06pakmvk5" path="res://Scripts/Stats/Tori2.tres" id="7_420tl"]
 [ext_resource type="Texture2D" uid="uid://dcultn6mbjg51" path="res://Assets/Sprites/MoveW(73x44).png" id="7_npogs"]
 [ext_resource type="Script" path="res://Scripts/States/CharacterMove.gd" id="7_x64bk"]
 [ext_resource type="Texture2D" uid="uid://7jmpdrihoqnc" path="res://Assets/Sprites/MoveS(73x44).png" id="9_pdlgv"]
 [ext_resource type="Texture2D" uid="uid://3a0yrx80pxps" path="res://Assets/Sprites/MoveSE(73x44).png" id="10_ncvcx"]
 [ext_resource type="Texture2D" uid="uid://b5voatsdqdvo7" path="res://Assets/Sprites/MoveSO(73x44).png" id="11_s1xw4"]
+[ext_resource type="Resource" uid="uid://c38e2n04o7fhl" path="res://Scripts/Stats/Tori.tres" id="17_0dcwp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_486rb"]
 atlas = ExtResource("2_rvhdd")
@@ -753,38 +752,14 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/path = NodePath("Hurtbox/CollisionShape2D:disabled")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [1]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Hitbox/CollisionShape2D2:disabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
 "values": [true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AnimatedSprite2D:animation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"attack_NW"]
 }
 
 [sub_resource type="Animation" id="Animation_p63ri"]
@@ -823,26 +798,38 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Hitbox/CollisionShape2D2:disabled")
+tracks/2/path = NodePath("Hurtbox/CollisionShape2D:disabled")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [true, false, true]
+"values": [false, true]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Hitbox/CollisionShape2D2:position")
+tracks/3/path = NodePath("Hurtbox/CollisionShape2D:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0.2),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(9, -5)]
+"values": [Vector2(10, -6)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Hurtbox/CollisionShape2D:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.46046]
 }
 
 [sub_resource type="Animation" id="Animation_ilb3x"]
@@ -875,26 +862,38 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Hitbox/CollisionShape2D2:disabled")
+tracks/2/path = NodePath("Hurtbox/CollisionShape2D:disabled")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [false, true, false]
+"values": [false, true]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Hitbox/CollisionShape2D2:position")
+tracks/3/path = NodePath("Hurtbox/CollisionShape2D:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0.2),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-13, -5)]
+"values": [Vector2(-10, -7)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Hurtbox/CollisionShape2D:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.70328]
 }
 
 [sub_resource type="Animation" id="Animation_ngoqm"]
@@ -922,27 +921,28 @@ _data = {
 "attack_W": SubResource("Animation_kbcw8")
 }
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h7bva"]
-radius = 4.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yull1"]
+radius = 5.0
 height = 24.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8iieq"]
-radius = 7.99962
-height = 52.017
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k8tfi"]
+radius = 6.07363
+height = 50.3566
 
-[node name="Tori" instance=ExtResource("1_165ns")]
-accerelation = 75
+[node name="Tori" groups=["Player"] instance=ExtResource("1_165ns")]
 
 [node name="Shadow(73x44)" type="Sprite2D" parent="." index="0"]
 position = Vector2(0, 3)
 texture = ExtResource("2_3c55x")
 
 [node name="AnimatedSprite2D" parent="." index="1"]
+position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_ce1k3")
-animation = &"attack_NW"
-frame = 1
+animation = &"attack_NE"
+frame = 6
 
 [node name="CollisionShape2D" parent="." index="2"]
+light_mask = 2
 position = Vector2(0, 6)
 shape = SubResource("CapsuleShape2D_a6wun")
 
@@ -963,26 +963,34 @@ script = ExtResource("5_8r7k8")
 [node name="CharacterMove" type="Node" parent="State Machine" index="2"]
 script = ExtResource("7_x64bk")
 
-[node name="Characteristics" parent="." index="5"]
-starting_stats = ExtResource("7_420tl")
+[node name="Stats" parent="." index="5"]
+starting_stats = ExtResource("17_0dcwp")
 
-[node name="Hurtbox" parent="." index="6"]
+[node name="Hitbox" parent="." index="6"]
+light_mask = 2
+visibility_layer = 4
 collision_layer = 2
-collision_mask = 260
+collision_mask = 4
+
+[node name="CollisionShape2D2" parent="Hitbox" index="1"]
+position = Vector2(0, 6)
+shape = SubResource("CapsuleShape2D_yull1")
+
+[node name="Camera2D" type="Camera2D" parent="." index="7"]
+zoom = Vector2(3, 3)
+
+[node name="Hurtbox" parent="." index="8"]
+light_mask = 2
+visibility_layer = 4
+collision_layer = 8
+collision_mask = 4
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
-position = Vector2(0, 4)
-shape = SubResource("CapsuleShape2D_h7bva")
-
-[node name="Hitbox" parent="." index="7" instance=ExtResource("4_g30sy")]
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Hitbox" index="1"]
-position = Vector2(-13, -5)
-rotation = -1.58054
-shape = SubResource("CapsuleShape2D_8iieq")
+light_mask = 2
+visibility_layer = 4
+position = Vector2(10, -6)
+rotation = -1.46046
+shape = SubResource("CapsuleShape2D_k8tfi")
 disabled = true
-
-[node name="Camera2D" type="Camera2D" parent="." index="8"]
-zoom = Vector2(3, 3)
 
 [editable path="Hurtbox"]
