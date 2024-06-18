@@ -1,10 +1,11 @@
 extends Node
 
 # --CONSTANTES--
-const NORMAL_ROOMS_E: Array = [preload("res://Nodes/Rooms/room_calle_centro_3.tscn")]
+const NORMAL_ROOMS_E: Array = [preload("res://Nodes/Rooms/room_calle_centro_3.tscn"), 
+preload("res://Nodes/Rooms/boulevard_2.tscn")]
 const NORMAL_ROOMS_W: Array = [preload("res://Nodes/Rooms/room_calle_centro_4.tscn")]
 const NORMAL_ROOMS_S: Array = [preload("res://Nodes/Rooms/room_calle_centro_1.tscn"),
-preload("res://Nodes/Rooms/room_calle_centro_2.tscn")]
+preload("res://Nodes/Rooms/room_calle_centro_2.tscn"), preload("res://Nodes/Rooms/boulevard_!.tscn")]
 const SPECIAL_ROOMS_S: Array = [preload("res://Nodes/Rooms/room_plaza.tscn")]
 const SPECIAL_ROOMS_W: Array = [preload("res://Nodes/Rooms/room_plaza2.tscn")]
 
@@ -25,7 +26,8 @@ func _make_level():
 		var packed_room
 		
 		if i == 0:
-			packed_room = preload("res://Nodes/Rooms/prueba1.tscn")
+			packed_room = preload("res://Nodes/Rooms/boulevard_2.tscn")
+			#packed_room = preload("res://Nodes/Rooms/prueba1.tscn")
 		else:
 			if i == num_rooms - 1:
 				#AÑADIR LA HABITACIÓN PREVIA AL BOSS

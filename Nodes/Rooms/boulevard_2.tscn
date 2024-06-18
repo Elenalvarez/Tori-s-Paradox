@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://c57xmkl2dnubn"]
+
+[ext_resource type="PackedScene" uid="uid://cxo5rwdodfuhv" path="res://Nodes/Rooms/room.tscn" id="1_tdgsd"]
+[ext_resource type="PackedScene" uid="uid://dywjyneapuj0k" path="res://Nodes/Rooms/Tilemaps/Boulevard 2.tscn" id="2_tpvav"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tlrg4"]
+size = Vector2(636.367, 42.0637)
+
+[node name="Room" instance=ExtResource("1_tdgsd")]
+exit_direction = "W"
+entrance_direction = "E"
+
+[node name="TileMap" parent="." index="0" instance=ExtResource("2_tpvav")]
+
+[node name="Entrance" parent="." index="1"]
+position = Vector2(-459, 523)
+
+[node name="Marker2D" type="Marker2D" parent="EnemyPosition" index="0"]
+position = Vector2(-804, 471)
+
+[node name="Marker2D2" type="Marker2D" parent="EnemyPosition" index="1"]
+position = Vector2(-1021, 201)
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(454, 292)
+rotation = -0.477758
+shape = SubResource("RectangleShape2D_tlrg4")
