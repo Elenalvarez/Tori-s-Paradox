@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkgrasl3rigvj"]
+
+[ext_resource type="PackedScene" uid="uid://cqulo3a0dlkum" path="res://Nodes/Rooms/Calle_iglesia_S.tscn" id="1_y8ghi"]
+
+[node name="Room" instance=ExtResource("1_y8ghi")]
+entrance_direction = "W"
+
+[node name="Entrance" parent="." index="1"]
+position = Vector2(886, 306)

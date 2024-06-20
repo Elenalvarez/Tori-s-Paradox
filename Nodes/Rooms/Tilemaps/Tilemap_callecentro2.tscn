@@ -1,12 +1,12 @@
 [gd_scene load_steps=2 format=3 uid="uid://dla015j21sl0p"]
 
-[ext_resource type="TileSet" uid="uid://bicvskqyrbaw1" path="res://Tileset.tres" id="1_m11w4"]
+[ext_resource type="TileSet" uid="uid://bmbueo2qxp4u7" path="res://Tileset (1).tres" id="1_wehrt"]
 
 [node name="TileMap" type="TileMap"]
 z_as_relative = false
 y_sort_enabled = true
 scale = Vector2(0.955269, 1.00559)
-tile_set = ExtResource("1_m11w4")
+tile_set = ExtResource("1_wehrt")
 cell_quadrant_size = 1
 format = 2
 layer_0/name = "DETRÁS DE TODO"

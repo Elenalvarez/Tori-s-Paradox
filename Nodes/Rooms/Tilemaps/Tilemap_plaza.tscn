@@ -1,11 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://bbp4ywyksmild"]
 
-[ext_resource type="TileSet" uid="uid://bicvskqyrbaw1" path="res://Tileset.tres" id="1_gyj6c"]
+[ext_resource type="TileSet" uid="uid://bmbueo2qxp4u7" path="res://Tileset (1).tres" id="1_7u173"]
 
 [node name="TileMap" type="TileMap"]
 z_as_relative = false
 y_sort_enabled = true
-tile_set = ExtResource("1_gyj6c")
+tile_set = ExtResource("1_7u173")
 cell_quadrant_size = 1
 collision_animatable = true
 format = 2

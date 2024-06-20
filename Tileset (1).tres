@@ -1,11 +1,13 @@
-[gd_resource type="TileSet" load_steps=31 format=3 uid="uid://bicvskqyrbaw1"]
+[gd_resource type="TileSet" load_steps=35 format=3 uid="uid://bmbueo2qxp4u7"]
 
 [ext_resource type="Texture2D" uid="uid://dbahqulqxg2e8" path="res://Assets/Tiles/ASFALTO SIMETRICO.png" id="1_17khg"]
 [ext_resource type="Texture2D" uid="uid://cia3xowpj7se3" path="res://Assets/Tiles/TILESET DE CALLES.png" id="1_of1ng"]
 [ext_resource type="Texture2D" uid="uid://wgqka4h51n5b" path="res://Assets/Tiles/SECCIONES SUBTERRANEAS.png" id="2_v6mv0"]
 [ext_resource type="Texture2D" uid="uid://dm0ldtdla8607" path="res://Assets/Tiles/SECCIONES SUBTERRANEAS SIM.png" id="3_0o2gl"]
+[ext_resource type="Texture2D" uid="uid://dq5rxcmki8b2s" path="res://Assets/Tiles/CHIESA SAN CARLO FINALES.png" id="3_fgaa3"]
 [ext_resource type="Texture2D" uid="uid://bb5x6o2qkssiq" path="res://Assets/Tiles/ALZADOS.png" id="4_x3co0"]
 [ext_resource type="Texture2D" uid="uid://71ket3gkdh6u" path="res://Assets/Tiles/TILESET DE CALLES ASFATOS.png" id="5_h4hgx"]
+[ext_resource type="Texture2D" uid="uid://b6u0ab7pb4g3c" path="res://Assets/Tiles/CHIESA SAN CARLO FONTANE 2.png" id="6_48o5f"]
 [ext_resource type="Texture2D" uid="uid://6dewv7phwdmj" path="res://Assets/Tiles/RESOL DEFINITIVA TILE.png" id="6_xhklv"]
 [ext_resource type="Texture2D" uid="uid://v04o1e3dbc52" path="res://Assets/Tiles/ALZADOS SIMÉTRICOS.png" id="7_nikhl"]
 [ext_resource type="Texture2D" uid="uid://8dik2aywnq2k" path="res://Assets/Tiles/BARRERA PARADOJA ANIMACION COMPLETA.png" id="8_qyx1d"]
@@ -106,6 +108,13 @@ texture_region_size = Vector2i(38, 38)
 5:2/0/physics_layer_0/angular_velocity = 0.0
 5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 4, 9, 0, 9, -1, 0, 3)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0nxw1"]
+texture = ExtResource("3_fgaa3")
+texture_region_size = Vector2i(753, 817)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ykgxq"]
 texture = ExtResource("2_v6mv0")
 texture_region_size = Vector2i(38, 38)
@@ -145,6 +154,13 @@ texture_region_size = Vector2i(38, 38)
 8:0/0 = 0
 8:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 8:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4qn8u"]
+texture = ExtResource("6_48o5f")
+texture_region_size = Vector2i(136, 124)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i8e1w"]
 texture = ExtResource("4_x3co0")
@@ -439,3 +455,5 @@ sources/5 = SubResource("TileSetAtlasSource_gmjwi")
 sources/7 = SubResource("TileSetAtlasSource_vk50p")
 sources/8 = SubResource("TileSetAtlasSource_rfoan")
 sources/9 = SubResource("TileSetAtlasSource_vcrfb")
+sources/10 = SubResource("TileSetAtlasSource_0nxw1")
+sources/15 = SubResource("TileSetAtlasSource_4qn8u")

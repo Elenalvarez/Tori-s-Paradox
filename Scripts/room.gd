@@ -39,7 +39,7 @@ func _process(delta):
 # Función de cambio de habitación
 func _on_area_2d_body_entered(body):
 	if body is Character:
-		if Global.actual_room < 5: 
+		if Global.actual_room < Global.level_rooms.size(): 
 			get_tree().change_scene_to_packed(Global.level_rooms[Global.actual_room])
 			Global.actual_room += 1
 

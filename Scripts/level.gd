@@ -26,12 +26,16 @@ func _make_level():
 		var packed_room
 		
 		if i == 0:
-			packed_room = preload("res://Nodes/Rooms/boulevard_2.tscn")
-			#packed_room = preload("res://Nodes/Rooms/prueba1.tscn")
+			packed_room = preload("res://Nodes/Rooms/prueba1.tscn")
 		else:
-			if i == num_rooms - 1:
-				#AÑADIR LA HABITACIÓN PREVIA AL BOSS
-				pass
+			if i == num_rooms:
+				match previous_room.exit_direction:
+					"N":
+						packed_room = preload("res://Nodes/Rooms/Calle_iglesia_S.tscn")
+					"E":
+						packed_room = preload("res://Nodes/Rooms/Calle_iglesia_W.tscn")
+					"W":
+						packed_room = preload("res://Nodes/Rooms/Calle_iglesia_E.tscn")
 			else:
 				if i == int(num_rooms/2):
 					match previous_room.exit_direction:

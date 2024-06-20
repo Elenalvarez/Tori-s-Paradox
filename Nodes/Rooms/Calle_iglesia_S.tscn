@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqulo3a0dlkum"]
+
+[ext_resource type="PackedScene" uid="uid://cxo5rwdodfuhv" path="res://Nodes/Rooms/room.tscn" id="1_fid26"]
+[ext_resource type="PackedScene" uid="uid://0jfgjsjweyvt" path="res://Nodes/Rooms/Tilemaps/CALLE FINAL.tscn" id="2_grdch"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7ryuw"]
+radius = 17.0
+height = 66.0
+
+[node name="Room" instance=ExtResource("1_fid26")]
+exit_direction = "-"
+entrance_direction = "S"
+
+[node name="TileMap" parent="." index="0" instance=ExtResource("2_grdch")]
+
+[node name="Entrance" parent="." index="1"]
+position = Vector2(432, 848)
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(1474, 275)
+rotation = -0.0304744
+shape = SubResource("CapsuleShape2D_7ryuw")
