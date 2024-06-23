@@ -30,8 +30,7 @@ func _ready():
 	player.global_position = entrance.global_position
 	
 	num_enemies = enemy_positions.get_child_count()
-	#spawn_enemies()
-	tilemap.clear_layer(13)
+	spawn_enemies()
 
 func _process(delta):
 	if num_enemies == 0:
