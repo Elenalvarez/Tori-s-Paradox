@@ -11,6 +11,7 @@ exit_direction = "W"
 entrance_direction = "E"
 
 [node name="TileMap" parent="." index="0" instance=ExtResource("2_tpvav")]
+collision_visibility_mode = 0
 
 [node name="Entrance" parent="." index="1"]
 position = Vector2(-459, 523)

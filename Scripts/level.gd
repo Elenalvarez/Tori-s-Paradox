@@ -22,7 +22,7 @@ func _ready():
 func _make_level():
 	var previous_room:Room
 	
-	for i in num_rooms:
+	for i in num_rooms+1:
 		var packed_room
 		
 		if i == 0:

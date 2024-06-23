@@ -12,6 +12,7 @@ entrance_direction = "S"
 
 [node name="TileMap" parent="." index="0" instance=ExtResource("2_4ltqq")]
 position = Vector2(2, 1)
+collision_visibility_mode = 0
 layer_12/y_sort_enabled = false
 
 [node name="Entrance" parent="." index="1"]

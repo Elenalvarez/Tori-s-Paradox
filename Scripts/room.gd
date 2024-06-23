@@ -30,7 +30,8 @@ func _ready():
 	player.global_position = entrance.global_position
 	
 	num_enemies = enemy_positions.get_child_count()
-	spawn_enemies()
+	#spawn_enemies()
+	tilemap.clear_layer(13)
 
 func _process(delta):
 	if num_enemies == 0:
@@ -51,14 +52,17 @@ func spawn_enemies():
 			#añadir boss
 			pass
 		else:
-			if randf_range(0, 1) > Global.difficulty:
-				enemy = NORMAL_ENEMIES.pick_random().instantiate()
-			else:
-				#CAMBIAR A ENEMIGOS DIFICILES
-				enemy = NORMAL_ENEMIES.pick_random().instantiate()
+			enemy = select_enemy(Global.difficulty)
 		
 		enemy.position = enemy_position.position
 		call_deferred("add_child", enemy)
+
+func select_enemy(difficulty: float):
+	if randf_range(0, 1) > difficulty:
+		return NORMAL_ENEMIES.pick_random().instantiate()
+	else:
+		#CAMBIAR A ENEMIGOS DIFICILES CUANDO SE CREEN
+		return NORMAL_ENEMIES.pick_random().instantiate()
 
 
 

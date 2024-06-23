@@ -6,4 +6,7 @@
 entrance_direction = "E"
 
 [node name="Entrance" parent="." index="1"]
-position = Vector2(1534, 614)
+position = Vector2(-472, 375)
+
+[node name="Area2D" parent="." index="3"]
+position = Vector2(-1988, -257)

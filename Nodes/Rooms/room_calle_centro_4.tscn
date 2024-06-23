@@ -11,6 +11,7 @@ exit_direction = "N"
 entrance_direction = "W"
 
 [node name="TileMap" parent="." index="0" instance=ExtResource("2_cxd46")]
+collision_visibility_mode = 0
 
 [node name="Entrance" parent="." index="1"]
 position = Vector2(779, 455)

@@ -12,9 +12,13 @@ exit_direction = "-"
 entrance_direction = "S"
 
 [node name="TileMap" parent="." index="0" instance=ExtResource("2_grdch")]
+collision_visibility_mode = 0
 
 [node name="Entrance" parent="." index="1"]
-position = Vector2(432, 848)
+position = Vector2(-1587, 616)
+
+[node name="Area2D" parent="." index="3"]
+position = Vector2(-1994, -254)
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
 position = Vector2(1474, 275)
