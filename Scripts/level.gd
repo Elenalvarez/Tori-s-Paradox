@@ -53,7 +53,7 @@ func _make_level():
 						"W":
 							packed_room = NORMAL_ROOMS_E.pick_random()
 		
-		if packed_room != null: #SOLO HASTA QUE TENGAMOS LAS HABITACIONES PREVIAS
+		if packed_room != null:
 			previous_room = packed_room.instantiate()
 			Global.level_rooms.push_back(packed_room)
 	
